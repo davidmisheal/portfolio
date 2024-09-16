@@ -1,0 +1,424 @@
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins";
+        background-color: black;
+        color: white;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        position: fixed;
+        background-color: black;
+        padding: 20px 0;
+        z-index: 7;
+    }
+
+    .nav ul {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 3;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 10px;
+        font-weight: 300;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav a:hover {
+        color: rgb(208, 179, 46);
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        gap: 80px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .home {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin: 120px auto 0 auto;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .home-right {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid rgb(208, 179, 46);
+        box-shadow: rgba(255, 188, 2, 0.35) 0px 5px 100px;
+    }
+
+    .home-right img {
+        width: 300px;
+    }
+    .home-left{
+        margin-top: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .home-left h3 {
+        font-size: 13px;
+        font-weight: 400;
+        color: rgb(208, 179, 46);
+    }
+
+    .home-left h2 {
+        font-size: 50px;
+        width: 80%;
+        margin-top: 10px;
+    }
+
+    .home-left strong {
+        color: rgb(208, 179, 46);
+    }
+
+    .home-left p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .home-left button,
+    .about button,
+    .resume button {
+        padding: 20px 30px;
+        border-radius: 50px;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hirebtn,
+    .about button,
+    .resume button {
+        background-color: rgb(208, 179, 46);
+        border: 1px solid rgb(208, 179, 46);
+    }
+
+    .hirebtn:hover,
+    .about button:hover,
+    .resume button:hover {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+
+    .prbtn {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+
+    .prbtn:hover {
+        background-color: rgb(208, 179, 46);
+        border: 1px solid rgb(208, 179, 46);
+        color: black;
+    }
+
+    .home-left span {
+        display: flex;
+        gap: 10px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .about h2,
+    .resume h2,
+    .projects h2,
+    .contact h2 {
+        font-size: 40px;
+        z-index: 1;
+        margin: 0;
+        position: relative;
+        top: 50px;
+    }
+
+    .about h3,
+    .resume h3,
+    .projects h3,
+    .contact h3 {
+        font-size: 10vw;
+        position: relative;
+        margin: 0;
+        color: rgb(25, 25, 25);
+    }
+
+    .about p,
+    .resume p,
+    .projects p,
+    .contact p {
+        color: #999999;
+        margin: 0 0 40px 0;
+    }
+
+    .desc {
+        font-size: 12px;
+        text-align: center;
+        font-size: 13px;
+        width: 70%;
+    }
+
+    .about section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about section p {
+        font-weight: 300;
+    }
+
+    .about button,
+    .resume button {
+        margin-top: 30px;
+    }
+
+    .resume {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resume section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .resume section div {
+        width: 200px;
+        height: 120px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        box-shadow: rgba(201, 152, 30, 0.16) 0px 1px 10px;
+    }
+
+    .resume h4 {
+        margin: 0;
+        color: rgb(208, 179, 46);
+    }
+
+    .resume ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resume li {
+        color: #999999;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .resume li:hover {
+        color: white;
+    }
+
+    .resume div .major {
+        color: white;
+        font-size: 12px;
+    }
+
+    .resume section div p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .resume a {
+        color: #999999;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .resume a:hover {
+        color: white;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects img {
+        filter: brightness(0.5) opacity(0.8);
+        width: 300px;
+    }
+
+    .projects a {
+        color: white;
+    }
+
+    .projects section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    .project-25 {
+        position: absolute;
+        margin: auto;
+        z-index: 1;
+        font-size: 25px;
+        background-color: rgba(208, 178, 46, 0.508);
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        height: auto;
+        padding-top: 0%;
+        opacity: 0;
+        
+        /* Hidden initially */
+        transition: opacity 0.3s ease-in-out;
+        /* Smooth transition */
+    }
+
+    .project-50 {
+        position: absolute;
+        margin: auto;
+        z-index: 1;
+        font-size: 30px;
+        background-color: rgba(208, 178, 46, 0.508);
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        height: auto;
+        padding-top: 0%;
+        opacity: 0;
+        /* Hidden initially */
+        transition: opacity 0.3s ease-in-out;
+        /* Smooth transition */
+    }
+
+    /* Only show the h4 when its specific parent is hovered */
+    .project-wrapper:hover .project-25,
+    .project-wrapper:hover .project-50 {
+        opacity: 1;
+    }
+
+    .projects section span {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .projects section section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .projects section section div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 200px;
+        width: 300px;
+        overflow: hidden;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact i {
+        color: rgb(208, 179, 46);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        padding: 50px 35px;
+        align-items: center;
+    }
+
+    .contact ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        align-items: start;
+        list-style: none;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .contact li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 370px;
+        margin: auto;
+    }
+
+    .contact li p {
+        word-break: break-word;
+    }
+
+    .contact h6 {
+        font-size: 17px;
+    }
+}

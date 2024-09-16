@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Nav } from './components/Nav'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import '../src/mobile.css'
 export const Home = () => {
     const [hover, setHover] = useState(false)
     const downloadFile = () => {
@@ -40,7 +40,7 @@ export const Home = () => {
                         </span>
                     </section>
                     <section className='home-right'>
-                        <img src={require('../src/assets/IMG-20240519-WA0025.jpg')} />
+                        <img src={require('../src/assets/cropped.jpg')} />
                     </section>
                 </div>
                 <div id='about' className='about'>
@@ -50,7 +50,7 @@ export const Home = () => {
                     <h3>
                         About
                     </h3>
-                    <p>I'm David, a frontend developer focused on crafting clean, user-friendly websites. Below are my contact details.</p>
+                    <p className='desc'>I'm David, a frontend developer focused on crafting clean, user-friendly websites. Below are my contact details.</p>
                     <section>
                         <strong>Name:<p>David Misheal</p></strong>
                         <strong>Date of birth:<p>December 17,2001</p></strong>
@@ -67,7 +67,7 @@ export const Home = () => {
                     <h3>
                         Resume
                     </h3>
-                    <p>Here's a quick look at my experience and skills as a frontend developer.</p>
+                    <p className='desc'>Here's a quick look at my experience and skills as a frontend developer.</p>
                     <section>
                         <div>
                             <h4>Projects</h4>
@@ -113,7 +113,7 @@ export const Home = () => {
                 <div id='projects' className='projects'>
                     <h2>Projects</h2>
                     <h3>Projects</h3>
-                    <p>Check out some of the projects I've worked on as a frontend developer.</p>
+                    <p className='desc'>Check out some of the projects I've worked on as a frontend developer.</p>
                     <section>
                         <a href='https://github.com/davidmisheal/graduationproject'>
                             <span className="project-wrapper">
@@ -142,7 +142,7 @@ export const Home = () => {
                 <div id='contact' className='contact'>
                     <h2>Contact Me</h2>
                     <h3>Contact</h3>
-                    <p>Feel free to reach out to me for any collaboration or inquiries.</p>
+                    <p className='desc'>Feel free to reach out to me for any collaboration or inquiries.</p>
                     <section>
                         <ul>
                             <li>

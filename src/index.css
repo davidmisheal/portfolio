@@ -61,15 +61,19 @@ html {
   align-items: center;
   margin-top: 50px;
   margin: 120px auto 0 auto;
-  gap: 200px;
+  gap: 00px;
   width: 100%;
 }
-
-.home-right img {
-  width: 400px;
-  border-radius: 20px;
+.home-right{
+  width: 300px;
+  height: 300px;  
+  border-radius: 50%;
+  overflow: hidden;
   border: 2px solid rgb(208, 179, 46);
   box-shadow: rgba(255, 188, 2, 0.35) 0px 5px 100px;
+}
+.home-right img {
+  width: 300px;
 }
 
 .home-left h3 {
