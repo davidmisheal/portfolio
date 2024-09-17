@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import { Nav } from './components/Nav'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../src/mobile.css'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const Home = () => {
     const [hover, setHover] = useState(false)
     const downloadFile = () => {
@@ -18,6 +23,86 @@ export const Home = () => {
             })
             .catch(error => console.log('Error downloading the file', error));
     };
+    // Home section animation
+    // Animating home-right without scroll trigger
+    // Ensure the non-scroll animations restart on page reload
+    gsap.fromTo('.home-right',
+        { x: 200 },
+        {
+            x: 0,
+            duration: 1, onStart: () => gsap.set('.home-right', { clearProps: 'all' }) // Clear inline styles on start
+        }
+    );
+
+    // Ensure the non-scroll animations restart on page reload
+    gsap.fromTo('.home-left h2',
+        { opacity: 0 },
+        {
+            opacity: 1,
+            duration: 1.5,
+            onStart: () => gsap.set('.home-left h2', { clearProps: 'all' }) // Clear inline styles on start
+        }
+    );
+
+    // About section scroll-triggered animation
+    gsap.fromTo('.about section',
+        { y: -200, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top bottom',
+                end: '+=1000',
+                scrub: true,
+                onEnter: () => gsap.set('.about section', { clearProps: 'all' }) // Clear inline styles on enter
+            }
+        }
+    );
+
+    // Resume section scroll-triggered animation
+    gsap.fromTo('.resume section',
+        { y: -200, opacity: 0 },
+        {
+            y: 0,
+            opacity: 1, duration: 2,
+            scrollTrigger: {
+                trigger: '.resume',
+                start: 'top center',
+                end: '+=500',
+                scrub: true,
+                onEnter: () => gsap.set('.resume section', { clearProps: 'all' }) // Clear inline styles on enter
+            }
+        }
+    );
+    gsap.fromTo('.projects section span',
+        { opacity: 0 },
+        {
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.projects',
+                start: 'top top', // When the top of `.projects` hits the top of the viewport
+                end: '+=500',    // Scroll 800px further from the start point
+                scrub: true,     // Links animation progress to scroll position
+            }
+        }
+    );
+    // Animation for `.projects section section`
+    gsap.fromTo('.projects section section',
+        { opacity: 0 },
+        {
+            opacity: 1,
+            duration: 1,
+            delay: 1, // Delay the animation start
+            scrollTrigger: {
+                trigger: '.projects',
+                start: 'top top', // When the top of `.projects` hits the top of the viewport
+                end: '+=500',    // Scroll 800px further from the start point
+                scrub: true,     // Links animation progress to scroll position
+            }
+        }
+    );
 
     return (
         <>
